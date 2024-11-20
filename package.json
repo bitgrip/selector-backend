@@ -1,31 +1,45 @@
 {
-  "name": "selector-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "ts-node-dev --poll src/index.ts",
-    "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/index.js",
-    "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && npm install",
-    "rebuild": "npm run clean && npm install && npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.1",
-    "joi": "^17.6.2",
-    "mongoose": "^6.6.3",
-    "ts-node": "^10.6.0"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.13",
-    "rimraf": "^3.0.2",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.6.3"
-  }
+    "name": "selector-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "ts-node-dev --poll src/index.ts",
+        "build": "rimraf ./dist && tsc",
+        "start": "npm run build && node dist/index.js",
+        "clean": "rm -rf node_modules",
+        "reinstall": "npm run clean && npm install",
+        "rebuild": "npm run clean && npm install && npm run build",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "dev-container-new-data": "rm -rf mongo-init/data/mongo/* && docker-compose -f docker-compose.dev.yml up",
+        "dev-container": "docker-compose -f docker-compose.dev.yml up"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.1",
+        "joi": "^17.6.2",
+        "mongoose": "^6.6.3",
+        "ts-node": "^10.6.0"
+    },
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.22.5",
+        "@types/express": "^4.17.13",
+        "@types/jest": "^29.5.3",
+        "cross-env": "^7.0.3",
+        "jest": "^29.6.1",
+        "rimraf": "^3.0.2",
+        "supertest": "^6.3.3",
+        "ts-jest": "^29.1.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^4.6.3"
+    }
 }

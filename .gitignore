@@ -2,3 +2,4 @@ node_modules/
 dist/
 .env*
 .idea
+mongo-init/data/mongo

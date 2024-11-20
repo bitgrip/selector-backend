@@ -1,0 +1,16 @@
+{
+    "name": "mongo-init",
+    "version": "1.0.0",
+    "description": "Generates test data for the Seelector Star Wars database",
+    "source": "index.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup index.js --file dist/bundle.js --format cjs"
+    },
+    "author": "panvicka",
+    "license": "ISC",
+    "devDependencies": {
+        "rollup": "^3.27.0"
+    }
+}
